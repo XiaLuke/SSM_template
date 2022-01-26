@@ -40,7 +40,7 @@
 	<!-- 扫描器，将mybatis接口实现加入到ioc中 -->
 	<bean id="mapperScanner"
 		class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="cn.itsource.mapper" />
+		<property name="basePackage" value="cn.xiafan.dao" />
 	</bean>
 	
 	<!-- 事务控制 -->
