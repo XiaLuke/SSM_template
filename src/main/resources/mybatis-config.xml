@@ -7,8 +7,17 @@
 		<!-- 开启驼峰命名 -->
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
+	
 	<typeAliases>
 		<!-- 别名 -->
 		<package name="cn.xiafan.entity"/>
 	</typeAliases>
+	
+	<!-- 注册分页插件 plugins需要放在typeAliases后面 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!-- 分页合理化 不可能到达越界的页号-->
+			<property name="reasonable" value="true"/>
+		</plugin>
+	</plugins>
 </configuration>

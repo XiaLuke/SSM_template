@@ -14,8 +14,24 @@ public class Student {
     private String password;
 
     private String studentId;
+    
 
-    public Integer getId() {
+    public Student() {
+		super();
+	}
+
+	public Student(String realName, String phone, String collegeProfessionalClass, String email,
+			String password, String studentId) {
+		super();
+		this.realName = realName;
+		this.phone = phone;
+		this.collegeProfessionalClass = collegeProfessionalClass;
+		this.email = email;
+		this.password = password;
+		this.studentId = studentId;
+	}
+
+	public Integer getId() {
         return id;
     }
 

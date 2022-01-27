@@ -6,4 +6,8 @@
     select * from student
   </select>
   
+  <insert id="insert" parameterType="Student">
+  	insert into student(real_name,phone,email,password,student_id,college_professional_class) values (#{realName},#{phone},#{email},#{password},#{studentId},#{collegeProfessionalClass})
+  </insert>
+  
 </mapper>
