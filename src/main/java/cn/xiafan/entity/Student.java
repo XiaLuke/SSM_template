@@ -1,8 +1,11 @@
 package cn.xiafan.entity;
 
+import javax.validation.constraints.Pattern;
+
 public class Student {
     private Integer id;
 
+    @Pattern(regexp = "(^[a-zA-Z0-9]{4,10}$)|(^[\u2E80-\u9FFF]{2,5}])",message = "格式错误")
     private String realName;
 
     private String phone;
@@ -85,5 +88,18 @@ public class Student {
 
     public void setStudentId(String studentId) {
         this.studentId = studentId == null ? null : studentId.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", realName='" + realName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", collegeProfessionalClass='" + collegeProfessionalClass + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", studentId='" + studentId + '\'' +
+                '}';
     }
 }

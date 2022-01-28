@@ -26,4 +26,10 @@ public interface StudentMapper {
     List<Student> selectAll();
     
     int insert(Student record);
+
+    Integer check(@Param("realName") String realName);
+
+	Student getOne(@Param("id") Integer id);
+
+	void update(@Param("student") Student student);
 }

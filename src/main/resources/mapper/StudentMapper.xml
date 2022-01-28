@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xiafan.dao.StudentMapper">
-  
-  <select id="selectAll"  resultType="cn.xiafan.entity.Student">
-    select * from student
-  </select>
-  
-  <insert id="insert" parameterType="Student">
-  	insert into student(real_name,phone,email,password,student_id,college_professional_class) values (#{realName},#{phone},#{email},#{password},#{studentId},#{collegeProfessionalClass})
-  </insert>
-  
+    <update id="update" parameterType="Student">
+        update
+    </update>
+
+    <select id="selectAll" resultType="cn.xiafan.entity.Student">
+        select *
+        from student
+    </select>
+
+    <insert id="insert" parameterType="Student">
+        insert into student(real_name, phone, email, password, student_id, college_professional_class)
+        values (#{realName}, #{phone}, #{email}, #{password}, #{studentId}, #{collegeProfessionalClass})
+    </insert>
+
+    <select id="check" resultType="Integer">
+        select COUNT(*)
+        from student
+        where real_name = #{realName}
+    </select>
+    <select id="getOne" resultType="cn.xiafan.entity.Student">
+        select * from student where id = #{id}
+    </select>
+
 </mapper>

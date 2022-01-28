@@ -98,5 +98,12 @@
 			<version>2.13.1</version>
 		</dependency>
 
+		<!-- 数据校验 tomcat7以上的服务器直接导入，低于7以下的不支持el表达式，需要给服务器lib中替换el-->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.8.Final</version>
+		</dependency>
+
 	</dependencies>
 </project>
